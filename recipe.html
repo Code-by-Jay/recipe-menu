@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Recipe Card - Chocolate Cake</title>
+  <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+  <div class="card">
+    <h1>🍫 Chocolate Cake</h1>
+    <img src="https://images.unsplash.com/photo-1601979031896-2c88a6c09b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+     alt="Chocolate Cake" class="dish-img">
+
+    <div class="meta">
+      <p><b>Preparation Time:</b> 30 mins</p>
+      <p><b>Serving Size:</b> 8 slices</p>
+    </div>
+
+    <div class="buttons">
+      <button id="toggleIngredients">Show Ingredients</button>
+      <button id="toggleSteps">Show Steps</button>
+      <button id="startBtn">Start Cooking</button>
+      <button id="nextBtn" disabled>Next Step →</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <!-- Ingredients -->
+    <ul id="ingredients" class="hidden">
+      <li>2 cups flour</li>
+      <li>1 cup sugar</li>
+      <li>1/2 cup cocoa powder</li>
+      <li>2 eggs</li>
+      <li>1 cup milk</li>
+      <li>1 tsp baking powder</li>
+    </ul>
+
+    <!-- Steps -->
+    <ol id="steps" class="hidden">
+      <li>Preheat oven to 180°C (350°F).</li>
+      <li>Mix dry ingredients in a bowl.</li>
+      <li>Add eggs and milk, then stir well.</li>
+      <li>Pour into baking tin.</li>
+      <li>Bake for 25–30 minutes.</li>
+      <li>Cool, serve, and enjoy!</li>
+    </ol>
+
+    <!-- Progress bar -->
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+
+    <!-- Timer -->
+    <p id="timer" class="hidden">⏱️ Time Remaining: <span id="timeLeft">30</span> mins</p>
+  </div>
+
+  <script src="recipe.js"></script>
+</body>
+</html>
